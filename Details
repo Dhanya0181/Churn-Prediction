@@ -1,3 +1,18 @@
-Certainly! Here's a paraphrased version:
+In the challenge two datasets are given - train.csv and test.csv.
 
-Engaging in a churn prediction challenge through a Coursera data science course offered valuable insights into classification techniques and data analytics. It provided practical experience in utilizing machine learning algorithms and data analysis methods to address genuine business concerns. This experience likely included identifying important features, testing various models, evaluating their performance, preprocessing data, optimizing model parameters, and interpreting the results. Participation in such challenges not only enhances technical skills but also deepens comprehension of applying data science to solve real-world business problems, which can be invaluable in professional contexts and future projects.
+train.csv contains 70% of the overall sample (243,787 subscriptions to be exact) and and reveal whether or 
+not the subscription was continued into the next month (the “ground truth”).
+
+The test.csv dataset contains the exact same information about the remaining segment of the overall sample 
+(104,480 subscriptions to be exact), but does not disclose the “ground truth” for each subscription. 
+
+Task : Using the patterns you find in the train.csv data, predict whether the subscriptions in test.csv will be
+continued for another month, or not.
+
+Submission Format : A dataframe (call it prediction_df with two columns and exactly 104,480 rows (plus a header row). 
+The first column should be CustomerID so that we know which prediction belongs to which observation. The second column 
+should be called predicted_probability and should be a numeric column representing the likellihood that the subscription 
+will churn.
+
+Grading : To determine final score, they compared the predicted_probability predictions to the source of truth 
+labels for the observations in test.csv and calculate the ROC AUC.
